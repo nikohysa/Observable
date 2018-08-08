@@ -1,0 +1,15 @@
+{
+    "name": "niko/observable",
+    "authors": [
+        {
+            "name": "nikohysa",
+            "email": "nikohysa@unyt.edu.al"
+        }
+    ],
+    "autoload" : {
+        "psr-4": {
+            "Observable\\":"src/Observable"
+        }
+    },
+    "require": {}
+}
