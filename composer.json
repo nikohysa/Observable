@@ -1,0 +1,10 @@
+{
+    "name": "niko/observable",
+    "authors": [
+        {
+            "name": "nikohysa",
+            "email": "nikohysa@unyt.edu.al"
+        }
+    ],
+    "require": {}
+}
