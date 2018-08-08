@@ -10,19 +10,19 @@ interface ObservableInterface {
 	/**
 	 * @param Observer $observer
 	 *
-	 * @return mixed
+	 * @return Observable
 	 */
-	public function register(Observer $observer);
+	public function register(Observer $observer):Observable;
 
 	/**
-	 * @return mixed
+	 * @return void
 	 */
 	public function fireUpdate();
 
 	/**
 	 * @param Observer $observer
 	 *
-	 * @return mixed
+	 * @return void
 	 */
 	public function remove(Observer $observer);
 }

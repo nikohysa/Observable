@@ -2,18 +2,22 @@
 
 namespace Observable;
 
+use Singleton\AbstractSingleton;
+
 /**
  * Class Observable
  * @package Observable
  */
-abstract class Observable implements ObservableInterface {
-
+abstract class Observable extends AbstractSingleton implements ObservableInterface {
+	/**
+	 * @var Observer
+	 */
 	private $observers;
 
 	/**
 	 * @param Observer $observer
 	 *
-	 * @return Observable
+	 * @return ObservableInterface
 	 */
 	public function register(Observer $observer) {
 		$this->observers[] = $observer;
@@ -24,6 +28,7 @@ abstract class Observable implements ObservableInterface {
 		foreach ($this->observers as $key => $item) {
 			if ($item->compareTo($observer) === 0) {
 				unset($this->observers[$key]);
+				return;
 			}
 		}
 	}

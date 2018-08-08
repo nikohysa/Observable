@@ -11,5 +11,15 @@
             "Observable\\":"src/Observable"
         }
     },
-    "require": {}
+    "repositories": [        {
+            "type": "vcs",
+            "url": "https://github.com/nikohysa/Singleton"
+        }
+    ],
+    "require": {
+        "nikohysa/Singleton":"1.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit":"^7"
+    }
 }
